@@ -1,5 +1,5 @@
 """
-LLM provider abstraction. Same factory pattern as the Angular migration
+LLM provider abstraction. factory pattern
 tool: an ABC + concrete clients + a factory function, so every downstream
 module depends only on `LLMProvider`, never on a specific SDK.
 
