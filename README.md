@@ -16,6 +16,7 @@ Standard RAG (chunk → embed → top-k similarity) breaks down on long structur
 
 This pipeline addresses all three directly — see [Architecture](#architecture) below.
 
+
 ## Key features
 
 - **Structured chart extraction** — charts are parsed into axis labels, units, series, data points, and a one-line claim with a confidence score, not just captioned.
@@ -26,6 +27,8 @@ This pipeline addresses all three directly — see [Architecture](#architecture)
 - **Swappable LLM provider** — factory pattern supports Anthropic and Azure OpenAI; each pipeline stage can use a different model if needed.
 
 ## Architecture
+
+![Architecture Diagram](./images/multimodal_rag_architecture.png)
 
 ```
 PDFs → Ingestion → Entity & graph layer → Storage → Retrieval → Generation
